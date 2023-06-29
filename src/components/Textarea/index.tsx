@@ -5,7 +5,7 @@ type Props = DetailedHTMLProps<
   HTMLTextAreaElement
 >;
 
-export default function TextArea(props: Props) {
+export default function Textarea(props: Props) {
   return (
     <textarea
       {...props}
