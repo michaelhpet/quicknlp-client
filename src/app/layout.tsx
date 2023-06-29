@@ -5,6 +5,8 @@ import Button from "@/components/Button";
 import BrightnessIcon from "@/icons/BrightnessIcon";
 import { Space_Grotesk } from "next/font/google";
 import DropdownIcon from "@/icons/DropdownIcon";
+import ExternalLinkIcon from "@/icons/ExternalLinkIcon";
+import MenuIcon from "@/icons/MenuIcon";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -20,25 +22,33 @@ export default function RootLayout(props: Props) {
   return (
     <html lang="en">
       <body className={spaceGrotesk.className}>
-        <header className="sticky top-0 max-w-[1080px] mx-auto flex items-center justify-between px-2 py-4 bg-background">
+        <header className="sticky top-0 max-w-[1080px] mx-auto flex items-center justify-between p-4 bg-background">
           <Link href="/" className="flex items-center gap-2">
             <QuickNLPIcon />
             <h1 className="text-lg font-bold">QuickNLP</h1>
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="items-center gap-4 hidden sm:flex">
             <Button endIcon={DropdownIcon} className="min-w-[200px]">
               Algorithms
             </Button>
             <Button endIcon={BrightnessIcon}>Dark</Button>
           </div>
+          <Button startIcon={MenuIcon} className="block sm:hidden" />
         </header>
 
-        <main className="max-w-[1080px] mx-auto px-2">{props.children}</main>
+        <main className="max-w-[1080px] mx-auto px-4">{props.children}</main>
 
-        <footer className="border-t-2 border-solid">
-          <div className="max-w-[1080px] mx-auto flex items-center gap-2 px-2 py-8">
+        <footer className="border-t-2 border-solid border-foreground">
+          <div className="max-w-[1080px] mx-auto flex items-center gap-4 px-4 py-8">
             <p>&copy;{new Date().getFullYear()}</p>
+            <Button
+              href="https://michaelhpet.com"
+              external
+              endIcon={ExternalLinkIcon}
+            >
+              Michael Peter
+            </Button>
           </div>
         </footer>
       </body>

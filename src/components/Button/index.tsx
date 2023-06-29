@@ -29,7 +29,7 @@ export default function Button(props: Props) {
   const element = (
     <button
       {...domProps}
-      className={`flex items-center justify-between gap-1 px-3 py-2 border-2 border-foreground rounded-lg hover:scale-105 transition-all ${
+      className={`flex items-center justify-center sm:justify-between gap-1 px-3 py-2 border-2 border-foreground rounded-lg hover:scale-105 transition-all ${
         size === "sm" ? "text-base" : size === "lg" ? "text-2xl" : "text-lg"
       } leading-none ${
         variant === "contained" ? "text-background bg-foreground" : ""
@@ -37,7 +37,7 @@ export default function Button(props: Props) {
     >
       {StartIcon ? (
         <StartIcon
-          size={size === "sm" ? "16" : size === "lg" ? "24" : "18"}
+          size={size === "sm" ? "20" : size === "lg" ? "28" : "22"}
           color={
             variant === "contained"
               ? "rgb(var(--background-color))"
@@ -48,7 +48,7 @@ export default function Button(props: Props) {
       {domProps.children}
       {EndIcon ? (
         <EndIcon
-          size={size === "sm" ? "16" : size === "lg" ? "24" : "18"}
+          size={size === "sm" ? "20" : size === "lg" ? "28" : "22"}
           color={
             variant === "contained"
               ? "rgb(var(--background-color))"
