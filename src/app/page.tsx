@@ -1,8 +1,5 @@
 import AlgoCard from "@/components/AlgoCard";
-import Button from "@/components/Button";
-import CodeIcon from "@/icons/CodeIcon";
-import DropdownIcon from "@/icons/DropdownIcon";
-import Textarea from "@/components/Textarea";
+import CorpusForm from "@/components/CorpusForm";
 
 export default function Home() {
   return (
@@ -15,37 +12,25 @@ export default function Home() {
           Write a text, choose an algorithm, and export desired result in
           various formats.
         </p>
-        <form className="w-full flex flex-col gap-8 p-6 border-2 border-foreground rounded-2xl">
-          <Textarea name="corpus" rows={3} placeholder="Write something..." />
-          <div className="flex flex-col sm:flex-row items-center justify-end gap-4">
-            <Button
-              size="lg"
-              endIcon={DropdownIcon}
-              className="min-w-full sm:min-w-[220px]"
-            >
-              Choose algo
-            </Button>
-            <Button
-              size="lg"
-              variant="contained"
-              startIcon={CodeIcon}
-              className="min-w-full sm:min-w-0"
-            >
-              Invoke
-            </Button>
-          </div>
-        </form>
+        <CorpusForm withAlgoSelect />
       </article>
 
       <article className="flex flex-col gap-6">
         <h2 className="font-bold text-2xl text-center text-accent">
           Algorithms
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-6">
+        <div className="grid grid-cols-[repeat(auto-fill,_minmax(324px,_1fr))] gap-6">
           {Array(16)
             .fill(0)
             .map((_, i) => (
-              <AlgoCard key={i} />
+              <AlgoCard
+                key={i}
+                name="Sentiment analysis"
+                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+              inventore blanditiis doloremque numquam facilis, suscipit veniam
+              similique esse laudantium at. Obcaecati at nihil suscipit ad, sunt ullam
+              ratione commodi qui."
+              />
             ))}
         </div>
       </article>

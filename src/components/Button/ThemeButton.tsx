@@ -25,13 +25,21 @@ export function ThemeButton() {
 
   if (!mounted)
     return (
-      <Button endIcon={BrightnessIcon} aria-label="Theme button">
+      <Button
+        endIcon={BrightnessIcon}
+        aria-label="Theme button"
+        className="min-w-[100px]"
+      >
         Color
       </Button>
     );
 
   return (
-    <Button onClick={handleClick} endIcon={BrightnessIcon}>
+    <Button
+      onClick={handleClick}
+      endIcon={BrightnessIcon}
+      className="min-w-[100px]"
+    >
       {titleCase(theme)}
     </Button>
   );
