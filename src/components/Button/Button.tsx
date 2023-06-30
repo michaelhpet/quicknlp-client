@@ -65,7 +65,7 @@ function makeClassName({
   className,
 }: Pick<Props, "variant" | "size" | "className">) {
   const classes = [
-    "flex items-center justify-center sm:justify-between gap-1 px-3 py-2 md:hover:scale-105 transition-all leading-none",
+    "flex items-center justify-center sm:justify-between gap-1 px-3 py-2 md:hover:scale-105 transition-transform leading-none whitespace-nowrap",
   ];
 
   if (variant === "contained") classes.push("text-background bg-foreground");

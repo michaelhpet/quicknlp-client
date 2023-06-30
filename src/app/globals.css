@@ -17,7 +17,8 @@
     --accent-color: 255, 107, 0;
   }
 
-  textarea::-webkit-scrollbar {
+  textarea::-webkit-scrollbar,
+  nav::-webkit-scrollbar {
     display: none;
   }
 

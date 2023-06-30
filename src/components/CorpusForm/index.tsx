@@ -7,12 +7,18 @@ import SettingsIcon from "@/icons/SettingsIcon";
 interface Props {
   withAlgoSelect?: boolean;
   withSettingsButton?: boolean;
+  fullHeight?: boolean;
 }
 
 export default function CorpusForm(props: Props) {
   return (
     <form className="w-full flex flex-col gap-8 p-6 border-2 border-foreground rounded-2xl">
-      <Textarea name="corpus" rows={3} placeholder="Write something..." />
+      <Textarea
+        name="corpus"
+        rows={3}
+        placeholder="Write something..."
+        {...(props.fullHeight ? { className: "min-h-[400px]" } : {})}
+      />
 
       <div className="flex flex-col sm:flex-row items-center justify-end gap-4">
         {props.withSettingsButton ? (

@@ -29,7 +29,7 @@ export default function AlgoCard(props: Partial<Algo>) {
           startIcon={CodeIcon}
           className="min-w-full sm:min-w-0"
         >
-          Invoke
+          Try
         </Button>
       </div>
     </article>
