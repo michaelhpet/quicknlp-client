@@ -3,20 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root.light {
     --foreground-color: 30, 30, 30;
     --background-color: 236, 236, 236;
     --highlight-color: 104, 104, 104;
     --accent-color: 255, 107, 0;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-color: 210, 210, 210;
-      --background-color: 30, 30, 30;
-      --highlight-color: 161, 158, 158;
-      --accent-color: 255, 107, 0;
-    }
+  :root.dark {
+    --foreground-color: 210, 210, 210;
+    --background-color: 30, 30, 30;
+    --highlight-color: 161, 158, 158;
+    --accent-color: 255, 107, 0;
   }
 
   textarea::-webkit-scrollbar {

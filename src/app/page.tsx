@@ -1,13 +1,13 @@
 import AlgoCard from "@/components/AlgoCard";
 import Button from "@/components/Button";
-import Textarea from "@/components/Textarea";
 import CodeIcon from "@/icons/CodeIcon";
 import DropdownIcon from "@/icons/DropdownIcon";
+import Textarea from "@/components/Textarea";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 mb-10">
-      <article className="flex flex-col items-center gap-8 py-10 sm: pt-20 text-center">
+    <section className="flex flex-col gap-10 mb-10">
+      <article className="flex flex-col items-center gap-8 py-10 sm:pt-20 text-center">
         <h1 className="font-bold text-6xl sm:text-8xl">
           Run quick NLP algorithms on the web
         </h1>
@@ -49,6 +49,6 @@ export default function Home() {
             ))}
         </div>
       </article>
-    </div>
+    </section>
   );
 }
