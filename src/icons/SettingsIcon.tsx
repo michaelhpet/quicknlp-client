@@ -1,4 +1,4 @@
-import IconProps from "@/types/IconProps";
+import IconProps from "@/lib/types/IconProps";
 
 export default function SettingsIcon(props: IconProps) {
   return (

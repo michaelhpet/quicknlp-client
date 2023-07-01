@@ -1,6 +1,6 @@
 "use client";
 
-import cls from "@/utils/cls";
+import cls from "@/lib/utils/cls";
 import { DetailedHTMLProps, FormEvent, TextareaHTMLAttributes } from "react";
 
 type Props = DetailedHTMLProps<

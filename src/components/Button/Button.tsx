@@ -1,4 +1,4 @@
-import IconProps from "@/types/IconProps";
+import IconProps from "@/lib/types/IconProps";
 import Link from "next/link";
 import { DetailedHTMLProps, ButtonHTMLAttributes } from "react";
 

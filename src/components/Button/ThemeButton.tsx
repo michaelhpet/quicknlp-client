@@ -4,7 +4,7 @@ import BrightnessIcon from "@/icons/BrightnessIcon";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import titleCase from "@/utils/titleCase";
+import titleCase from "@/lib/utils/titlecase";
 
 export function ThemeButton() {
   const [mounted, setMounted] = useState(false);

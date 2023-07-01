@@ -4,7 +4,7 @@ import QuickNLPIcon from "@/icons/QuickNLPIcon";
 import Button from "../Button";
 import { usePathname } from "next/navigation";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import cls from "@/utils/cls";
+import cls from "@/lib/utils/cls";
 
 interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {

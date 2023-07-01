@@ -1,7 +1,13 @@
 import AlgoCard from "@/components/AlgoCard";
 import CorpusForm from "@/components/CorpusForm";
+import getAlgorithms from "@/lib/api/getAlgorithms";
+import makeHref from "@/lib/utils/makeHref";
 
-export default function Home() {
+export default async function Home() {
+  console.log("getting algorithms");
+  const algorithms = await getAlgorithms();
+  console.log("algorithms are", algorithms);
+
   return (
     <section className="flex flex-col gap-10 mb-10">
       <article className="flex flex-col items-center gap-8 py-10 sm:pt-20 text-center">
@@ -20,18 +26,14 @@ export default function Home() {
           Algorithms
         </h2>
         <div className="grid grid-cols-[repeat(auto-fill,_minmax(324px,_1fr))] gap-6">
-          {Array(16)
-            .fill(0)
-            .map((_, i) => (
-              <AlgoCard
-                key={i}
-                name="Sentiment analysis"
-                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-              inventore blanditiis doloremque numquam facilis, suscipit veniam
-              similique esse laudantium at. Obcaecati at nihil suscipit ad, sunt ullam
-              ratione commodi qui."
-              />
-            ))}
+          {algorithms.map((algo) => (
+            <AlgoCard
+              key={algo.name}
+              name={algo.name}
+              description={algo.description}
+              href={makeHref(algo.name)}
+            />
+          ))}
         </div>
       </article>
     </section>
