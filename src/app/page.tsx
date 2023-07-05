@@ -4,9 +4,7 @@ import getAlgorithms from "@/lib/api/getAlgorithms";
 import makeHref from "@/lib/utils/makeHref";
 
 export default async function Home() {
-  console.log("getting algorithms");
   const algorithms = await getAlgorithms();
-  console.log("algorithms are", algorithms);
 
   return (
     <section className="flex flex-col gap-10 mb-10">
