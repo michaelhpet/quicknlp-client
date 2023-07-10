@@ -1,4 +1,5 @@
 import CorpusForm from "@/components/CorpusForm";
+import ResultArea from "@/components/ResultArea";
 import QuickNLPIcon from "@/icons/QuickNLPIcon";
 import getAlgorithm from "@/lib/api/getAlgorithm";
 import getAlgorithms from "@/lib/api/getAlgorithms";
@@ -12,11 +13,11 @@ export default async function Page(props: Props) {
   const algorithm = await getAlgorithm(props.params.algo);
 
   return (
-    <section className="flex-flex-col items-center gap-4 py-4 pb-10">
-      <article className="flex flex-col md:flex-row items-center gap-4 pb-10">
+    <section className="h-full flex flex-col items-center gap-4 py-4 pb-10">
+      <div className="h-full flex flex-col md:flex-row md:grow gap-4 pb-10">
         <CorpusForm withSettingsButton fullHeight />
-        <CorpusForm fullHeight />
-      </article>
+        <ResultArea />
+      </div>
 
       <article className="flex flex-col gap-4">
         <div className="flex items-center gap-2">

@@ -18,7 +18,8 @@
   }
 
   textarea::-webkit-scrollbar,
-  nav::-webkit-scrollbar {
+  nav::-webkit-scrollbar,
+  #result_area::-webkit-scrollbar {
     display: none;
   }
 
